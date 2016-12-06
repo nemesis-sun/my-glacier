@@ -82,3 +82,56 @@ h2.vault-title {
   border-bottom: solid 1px gainsboro;
 }
 
+.main-panel {
+  height: 680px;
+  border-left: solid 1px gainsboro;
+}
+
+.job-panel {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-list {
+  flex-grow: 5
+}
+
+.job-detail {
+  flex-grow: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-panel-main {
+  flex-grow: 1;
+/*  display: flex;*/
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.job-info {
+  background-color: red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.job-add {
+  background-color: blue;
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+}
+
+.job-panel-main .job-add {
+  bottom: -100%;
+  -webkit-transition: all 1s, -webkit-transform 1s;
+}
+
+.job-panel-main.new-job .job-add {
+  bottom: 0;
+  -webkit-transition: all 1s, -webkit-transform 1s;
+}

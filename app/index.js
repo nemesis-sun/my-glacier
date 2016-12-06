@@ -7,7 +7,7 @@ import { Router, Route, IndexRoute, hashHistory, IndexRedirect } from 'react-rou
 import appReducer from './reducers'
 import App from './components/App'
 import VaultPanel from './components/VaultPanel'
-import VaultJobList from './components/VaultJobList'
+import VaultJobPanel from './components/VaultJobPanel'
 import VaultInventoryList from './components/VaultInventoryList'
 
 
@@ -20,7 +20,7 @@ render(
         <Route path='/:regionId/vaults/:vaultARN' component={VaultPanel} >
           <IndexRedirect to="inventory" />
           <Route path='inventory' component={VaultInventoryList} />
-          <Route path='jobs' component={VaultJobList} />
+          <Route path='jobs' component={VaultJobPanel} />
         </Route>
       </Route>
     </Router>
